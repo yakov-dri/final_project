@@ -1,3 +1,7 @@
+import { goToLoginPage } from './goToLogin.js';
+goToLoginPage();
+
+
 class Products {
   constructor(
     title,

@@ -3,28 +3,22 @@ function login() {
   let buttonLogin = document.querySelector("#btnLogin");
   let error = document.querySelector("#error");
 
-  let lsadmin = localStorage.getItem("admin");
+  buttonLogin.addEventListener("click", (e) => {
+    const systemPassword = 1234;
+    //console.log(systemPassword);
+    e.preventDefault();
 
-  if (lsadmin) {
-    window.location = "index.html";
-  } else {
-    buttonLogin.addEventListener("click", (e) => {
-      const systemPassword = 1234;
-      //console.log(systemPassword);
-      e.preventDefault();
-
-      if (password.value == systemPassword) {
-        //alert("good");
-        localStorage.setItem("admin", systemPassword);
-        window.location = "index.html";
-      } else if (password.value != systemPassword) {
-        //alert("not good");
-        error.style.display = "block";
-        error.innerHTML =
-          "Enter the sistem password, <br> The password is not true";
-      }
-    });
-  }
+    if (password.value == systemPassword) {
+      //alert("good");
+      localStorage.setItem("admin", systemPassword);
+      window.location = "index.html";
+    } else if (password.value != systemPassword) {
+      //alert("not good");
+      error.style.display = "block";
+      error.innerHTML =
+        "Enter the sistem password, <br> The password is not true";
+    }
+  });
 }
 
 function addNubbers() {

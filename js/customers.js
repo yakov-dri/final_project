@@ -1,3 +1,6 @@
+import { goToLoginPage } from "./goToLogin.js";
+goToLoginPage();
+
 class Customers {
   constructor(id, first, last, email, company, created_at, country) {
     this.id = id;
@@ -7,7 +10,6 @@ class Customers {
     this.company = company;
     this.created_at = created_at;
     this.country = country;
-    //this.url = `https://i.picsum.photos/id/866/200/300.jpg`;
   }
 }
 
