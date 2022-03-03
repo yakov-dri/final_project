@@ -1,6 +1,5 @@
-import { goToLoginPage } from './goToLogin.js';
+import { goToLoginPage, createWindowModal } from "./goToLogin.js";
 goToLoginPage();
-
 
 class Products {
   constructor(
